@@ -1,0 +1,36 @@
+env:
+    APP_MESSAGE: Hello, MongoDB!
+envSecrets:
+    APP_SECRET: my-secrets
+
+probes:
+    enabled: true
+    path: /liveness
+    headers: {}
+    liveness:
+      httpGet: true
+      initialDelaySeconds: 10
+      periodSeconds: 60
+      timeoutSeconds: 1
+      successThreshold: 1
+      failureThreshold: 3
+
+services:
+    - name: http
+      ingress: true
+      port: 80
+      probes: true
+      protocol: TCP
+      targetPort: 8080
+      type: ClusterIP
+
+serviceAccount:
+    enabled: true
+    name: sa
+    roles:
+    - kind: ClusterRole
+      name: view
+
+volumeSecrets:
+    - name: my-secrets
+      path: /etc/secrets
