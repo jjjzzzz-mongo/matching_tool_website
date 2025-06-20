@@ -10,7 +10,7 @@ This is a complete Flask application following the MongoDB Kanopy tutorial with 
 
 - `app.py` - Flask application with environment variables and secrets
 - `Dockerfile` - Docker configuration for containerization  
-- `.drone.yml` - CI/CD pipeline configuration (configured for devops namespace)
+- `.drone.yml` - CI/CD pipeline configuration (configured for analytics namespace)
 - `environments/staging.yaml` - Complete staging environment configuration
 - `aws-config.txt` - Sample configuration file for volume secrets
 - `setup-secrets.sh` - Automated setup script
@@ -30,7 +30,7 @@ This is a complete Flask application following the MongoDB Kanopy tutorial with 
    - Add the secrets displayed by the setup script
 
 3. **Deploy:**
-   Your app will be available at: https://my-kanopy-app.devops.staging.corp.mongodb.com
+   Your app will be available at: https://my-kanopy-app.analytics.staging.corp.mongodb.com
 
 ### Manual Setup
 
@@ -52,7 +52,7 @@ If you prefer manual setup, see `my-app/manual-commands.md` for detailed instruc
 - ✅ Service mesh integration
 
 #### Architecture
-- **Namespace:** devops
+- **Namespace:** analytics
 - **App Name:** my-kanopy-app
 - **Architecture:** arm64
 - **Port:** 8080

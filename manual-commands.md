@@ -4,7 +4,7 @@ If you prefer to run commands manually instead of using the setup script:
 
 ## 1. Set Your Namespace
 ```bash
-export NAMESPACE="devops"  # Change to your actual namespace
+export NAMESPACE="analytics"  # Using analytics namespace
 ```
 
 ## 2. Get Drone Secrets
@@ -68,4 +68,4 @@ git push origin main
 ```
 
 Your app will be available at:
-https://my-kanopy-app.devops.staging.corp.mongodb.com
+https://my-kanopy-app.analytics.staging.corp.mongodb.com

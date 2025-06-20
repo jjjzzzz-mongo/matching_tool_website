@@ -15,7 +15,7 @@ steps:
   settings:
     create_repository: true
     registry: 795250896452.dkr.ecr.us-east-1.amazonaws.com
-    repo: devops/${DRONE_REPO_NAME}
+    repo: analytics/${DRONE_REPO_NAME}
     tags:
     - git-${DRONE_COMMIT_SHA:0:7}
     - latest
@@ -33,9 +33,9 @@ steps:
     chart: mongodb/web-app
     chart_version: 4.25.0
     add_repos: [mongodb=https://10gen.github.io/helm-charts]
-    namespace: devops
+    namespace: analytics
     release: my-kanopy-app
-    values: arch=arm64,image.tag=git-${DRONE_COMMIT_SHA:0:7},image.repository=795250896452.dkr.ecr.us-east-1.amazonaws.com/devops/${DRONE_REPO_NAME},ingress.enabled=true,ingress.hosts[0]=my-kanopy-app.devops.staging.corp.mongodb.com,mesh.enabled=true
+    values: arch=arm64,image.tag=git-${DRONE_COMMIT_SHA:0:7},image.repository=795250896452.dkr.ecr.us-east-1.amazonaws.com/analytics/${DRONE_REPO_NAME},ingress.enabled=true,ingress.hosts[0]=my-kanopy-app.analytics.staging.corp.mongodb.com,mesh.enabled=true
     values_files: [ "environments/staging.yaml" ]
     api_server: https://api.staging.corp.mongodb.com
     kubernetes_token:

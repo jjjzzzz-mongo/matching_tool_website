@@ -44,7 +44,7 @@ git push -u origin main
 
 ```bash
 # Set your namespace
-export NAMESPACE="devops"  # or your assigned namespace
+export NAMESPACE="analytics"  # using analytics namespace
 
 # Get staging token
 kubectl config use-context api.staging.corp.mongodb.com
@@ -94,12 +94,12 @@ git push origin main
 ## 8. ✅ Verify Deployment
 
 - **Drone Build:** Check https://drone.corp.mongodb.com for build status
-- **Application:** Visit https://my-kanopy-app.devops.staging.corp.mongodb.com
+- **Application:** Visit https://my-kanopy-app.analytics.staging.corp.mongodb.com
 - **Logs:** Use `kubectl logs` to troubleshoot if needed
 
 ## 🚨 Important Notes
 
-- Replace `devops` with your actual MongoDB namespace
+- Using `analytics` namespace for this deployment
 - Replace `YOUR_USERNAME` with your GitHub username
 - The MongoDB kubectl contexts must be configured by your infrastructure team
 - All secrets are specific to your MongoDB environment

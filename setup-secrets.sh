@@ -6,7 +6,7 @@
 echo "Setting up Kanopy project secrets..."
 
 # Set your namespace (change this to your actual namespace)
-NAMESPACE="devops"
+NAMESPACE="analytics"
 
 echo "Using namespace: $NAMESPACE"
 
